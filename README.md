@@ -144,5 +144,3 @@ to the exact filename of your image. For example:
 CUSTOM_IMAGE_PATH = "my_photo.jpg"
 
 Then run the final prediction cell. The model will display the image together with its prediction, confidence score, probability of being AI-generated and probability of being real.
-
-However, it also incorrectly classified 2,627 real images as AI-generated.

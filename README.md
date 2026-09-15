@@ -3,11 +3,11 @@
 
 This is a machine learning project I built in Jupyter Notebook to learn how image classification works with convolutional neural networks.
 
-The goal of the model is to classify an image as either **real** or **AI-generated**. I trained it using the CIFAKE dataset and used TensorFlow/Keras to build the CNN.
+The goal of the model is to classify an image as either **real** or **AI generated**. I trained it using the CIFAKE dataset and used TensorFlow/Keras to build the CNN.
 
 ## Dataset
 
-I used the CIFAKE dataset, which contains real images and AI-generated images.
+I used the CIFAKE dataset, which contains real images and AI generated images.
 
 The dataset is divided into:
 
@@ -37,11 +37,11 @@ After the convolution layers, the model uses global average pooling, dropout and
 The final output is a value between 0 and 1:
 
 - closer to 0 → REAL
-- closer to 1 → AI-GENERATED
+- closer to 1 → AI GENERATED
 
 ## Training
 
-I trained the model using the Adam optimizer and binary cross-entropy loss.
+I trained the model using the Adam optimizer and binary cross entropy loss.
 
 I also used EarlyStopping to monitor validation loss. This stops training when validation performance stops improving and restores the weights from the best epoch.
 
@@ -54,18 +54,18 @@ This was an important part of the project because it showed me that good trainin
 On the CIFAKE test set, my model achieved approximately:
 
 - Accuracy: 84.61%
-- Precision for AI-generated images: 78.43%
-- Recall for AI-generated images: 95.50%
+- Precision for AI generated images: 78.43%
+- Recall for AI generated images: 95.50%
 - F1 score: 86.13%
 - ROC-AUC: 95.09%
 
-The model correctly detected 9,550 out of 10,000 AI-generated test images. However, it also incorrectly classified 2,627 real images as AI-generated.
+The model correctly detected 9,550 out of 10,000 AI-generated test images. However, it also incorrectly classified 2,627 real images as AI generated.
 
 ## Testing with my own image
 
 I also tested the trained model using a real photo that I took myself. The image had been sent through WhatsApp and then downloaded again before I tested it.
 
-Even though the image was genuinely real, the model classified it as AI-generated with very high confidence. This showed an important limitation of the model.
+Even though the image was genuinely real, the model classified it as AI generated with very high confidence. This showed an important limitation of the model.
 
 The CNN learned patterns from the CIFAKE dataset, but those patterns do not necessarily generalize to every real-world image. Image compression, phone processing, resizing and other differences from the training dataset may affect the prediction.
 
@@ -89,7 +89,7 @@ Through this project I practiced:
 - using confusion matrices
 - testing the trained model on an external image
 
-One of the main things I learned is that evaluation metrics alone do not tell the whole story. A model can perform well on its test dataset and still make confident mistakes on real-world images.
+One of the main things I learned is that evaluation metrics alone do not tell the whole story. A model can perform well on its test dataset and still make confident mistakes on real world images.
 
 
 ## How to run the project
@@ -98,7 +98,7 @@ To run this project, first clone or download the repository and open the project
 
 pip install -r requirements.txt
 
-Next, download the CIFAKE: Real and AI-Generated Synthetic Images dataset from Kaggle:
+Next, download the CIFAKE: Real and AI Generated Synthetic Images dataset from Kaggle:
 
 https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images
 
@@ -127,13 +127,13 @@ After extraction, the notebook expects the dataset folders to be located at:
 TRAIN_PATH = "cifake_data/train"
 TEST_PATH = "cifake_data/test"
 
-You normally do not need to change these variables if cifake.zip is placed in the same folder as the notebook.
+You do not need to change these variables if cifake.zip is placed in the same folder as the notebook.
 
 Then open:
 
 ai_image_detector.ipynb
 
-using Jupyter Notebook or JupyterLab and run the cells from top to bottom. The notebook will load and prepare the dataset, train the CNN, evaluate the model and allow custom-image testing.
+using Jupyter Notebook or JupyterLab and run the cells from top to bottom. The notebook will load and prepare the dataset, train the CNN, evaluate the model and allow custom image testing.
 
 To test your own image after training, place the image in the same project folder and change:
 

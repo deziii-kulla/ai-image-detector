@@ -1,0 +1,6 @@
+cifake.zip
+cifake_data/
+*.keras
+.ipynb_checkpoints/
+__pycache__/
+test_image.jpeg
